@@ -1,0 +1,56 @@
+services:
+  # PostgreSQL Database
+  db:
+    image: postgres:15
+    container_name: drive_db
+    environment:
+      POSTGRES_DB: drive
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./postgres_data:/var/lib/postgresql/data
+    networks:
+      - drive_network
+
+  # FastAPI Backend
+  backend:
+    build: ./backend
+    container_name: drive_backend
+    ports:
+      - "8000:8000"
+    environment:
+      DATABASE_URL: postgresql://postgres:postgres@db:5432/drive
+      JWT_SECRET_KEY: 9rDfOtNwrki3kNdytrO0oGT/KmqUYw8/D3Md++X1raQ=
+      JWT_ALGORITHM: HS256
+      ACCESS_TOKEN_EXPIRE_MINUTES: 60
+      DEBUG: "True"
+    depends_on:
+      - db
+    volumes:
+      - ./backend:/app
+    networks:
+      - drive_network
+    command: uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
+
+  # React Frontend
+  frontend:
+    build: ./frontend
+    container_name: drive_frontend
+    ports:
+      - "5173:5173"
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    depends_on:
+      - backend
+    networks:
+      - drive_network
+
+volumes:
+  postgres_data:
+
+networks:
+  drive_network:
+    driver: bridge
