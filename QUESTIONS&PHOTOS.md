@@ -10,19 +10,13 @@
 
 Place your photos in this directory:
 ```
-/home/eric/IdeaProjects/fullstack-app/backend/static/images/questions/
+frontend/public/images/questions/
 ```
 
 ### Example:
 ```bash
 # Copy your photos to the backend static folder
-cp /path/to/your/photos/* /home/eric/IdeaProjects/fullstack-app/backend/static/images/questions/
-
-# Make sure the photos have reasonable names like:
-# - stop_sign.jpg
-# - speed_limit.png
-# - traffic_light.jpg
-# - parallel_parking.gif
+cp /path/to/your/photos/* frontend/public/images/questions/
 ```
 
 ## 📝 How to Add Questions
