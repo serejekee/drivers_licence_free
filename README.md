@@ -145,7 +145,7 @@ pytest
 
 ## 📸 How to Add Questions and Photos to Your Driving Test App
 
-[IMPORT](Questions&Photos.md)
+[IMPORT](QUESTIONS&PHOTOS.md)
 
 ---
 
