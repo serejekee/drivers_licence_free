@@ -143,7 +143,12 @@ pytest
 
 [MIT](LICENSE)
 
+## 📸 How to Add Questions and Photos to Your Driving Test App
+
+[IMPORT](Questions&Photos.md)
+
 ---
+
 
 ## 💡 Tip
 
