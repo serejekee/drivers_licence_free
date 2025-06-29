@@ -56,7 +56,7 @@ A **modern full-stack web application** built with ❤️ for managing users, ro
 ### 1. 📦 Clone the Repository
 
 ```bash
-git clone git@github.com:serejekee/fullstack_app_drivers_licence.git
+git clone git@github.com:serejekee/drivers_licence_free.git
 cd fullstack-app
 ```
 
