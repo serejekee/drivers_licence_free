@@ -20,7 +20,7 @@
 
 ## ✨ Overview
 
-A **modern full-stack web application** built with ❤️ for managing users, roles, items, and authentication. Features a responsive React frontend and a powerful FastAPI backend.
+A **modern full-stack web application** built with ❤️ for managing users, roles, questions, and authentication. Features a responsive React frontend and a powerful FastAPI backend.
 
 ---
 
