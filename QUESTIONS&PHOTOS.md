@@ -80,7 +80,7 @@ Use the template file `questions_template.csv` in the project root as a starting
 
 ### If photos don't show up:
 1. Check that photos are in the correct directory
-2. Verify the photo path in CSV starts with `/static/images/questions/`
+2. Verify the photo path in CSV starts with `/frontend/images/questions/`
 3. Restart the backend container: `docker-compose restart backend`
 
 ### If CSV upload fails:
